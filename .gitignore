@@ -7,6 +7,15 @@ Prototype 1(Truck)/[Bb]uilds/
 Prototype 1(Truck)/[Ll]ogs/
 Prototype 1(Truck)/[Uu]ser[Ss]ettings/
 
+Prototype2-FeedAnimals/[Ll]ibrary/
+Prototype2-FeedAnimals/[Tt]emp/
+Prototype2-FeedAnimals/[Oo]bj/
+Prototype2-FeedAnimals/[Bb]uild/
+Prototype2-FeedAnimals/[Bb]uilds/
+Prototype2-FeedAnimals/[Ll]ogs/
+Prototype2-FeedAnimals/[Uu]ser[Ss]ettings/
+
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
