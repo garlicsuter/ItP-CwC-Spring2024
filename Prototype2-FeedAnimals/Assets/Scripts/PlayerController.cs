@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //spawn steak
-            Instantiate(steakPrefab, transform.position, steakPrefab.transform.rotation);
+            Instantiate(steakPrefab, transform.position + new Vector3(0,1,0), steakPrefab.transform.rotation);
         }
         
         //keep the player inbounds

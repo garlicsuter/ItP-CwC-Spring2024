@@ -524,7 +524,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 45
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -590,23 +590,6 @@ Transform:
   - {fileID: 425805627}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1539947210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 700322485490555814, guid: 64b017e44decfbd49aa6e912ef9454b5, type: 3}
-  m_PrefabInstance: {fileID: 2310937600795320455}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1543234070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539947210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9070c24f12bb413409d1b0751da978bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1590138454
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +673,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590138454}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1642560092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642560094}
+  - component: {fileID: 1642560093}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1642560093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642560092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215be4c537cd2294ebd57732afbf843a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 6437175958975331439, guid: 7b722d0a8acd64a46a9af34f7c403d93, type: 3}
+  - {fileID: 3702931405810727039, guid: 161561b45c676874896dd4c7a4e414de, type: 3}
+  - {fileID: 6259441122755985668, guid: 8144f07b03f76df4d937ec8de8127c53, type: 3}
+--- !u!4 &1642560094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642560092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.078205, y: 15.161002, z: -4.762605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2122557844025674550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,10 +732,6 @@ PrefabInstance:
     - target: {fileID: 6437175958975331439, guid: 7b722d0a8acd64a46a9af34f7c403d93, type: 3}
       propertyPath: m_Name
       value: Animal_Chicken_White
-      objectReference: {fileID: 0}
-    - target: {fileID: 7708344909172824639, guid: 7b722d0a8acd64a46a9af34f7c403d93, type: 3}
-      propertyPath: speed
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7827068823552947262, guid: 7b722d0a8acd64a46a9af34f7c403d93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -803,14 +830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5048281140190312629, guid: 64b017e44decfbd49aa6e912ef9454b5, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 700322485490555814, guid: 64b017e44decfbd49aa6e912ef9454b5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1543234070}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64b017e44decfbd49aa6e912ef9454b5, type: 3}
 --- !u!1001 &7192637050810729321
 PrefabInstance:
@@ -820,10 +843,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3050589144319570559, guid: 161561b45c676874896dd4c7a4e414de, type: 3}
-      propertyPath: speed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 3702931405810727039, guid: 161561b45c676874896dd4c7a4e414de, type: 3}
       propertyPath: m_Name
       value: Animal_Cow_White
@@ -925,10 +944,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9205693797195886919, guid: 8144f07b03f76df4d937ec8de8127c53, type: 3}
-      propertyPath: speed
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -946,3 +961,4 @@ SceneRoots:
   - {fileID: 7192637050810729321}
   - {fileID: 8557040925721981094}
   - {fileID: 2310937600795320455}
+  - {fileID: 1642560094}
